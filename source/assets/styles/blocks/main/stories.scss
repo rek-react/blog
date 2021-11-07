@@ -1,0 +1,62 @@
+.stories {
+   &__body {
+   }
+
+   &__row {
+      display: flex;
+   }
+
+   &__col {
+      flex: 0 1 25%;
+   }
+
+   &__item {
+      cursor: pointer;
+      height: 195px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      color: $white;
+      border-radius: 10px;
+      overflow: hidden;
+      &::before {
+         content: "";
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         left: 0;
+         top: 0;
+         z-index: 1;
+         background: linear-gradient(to bottom, rgba(0, 0, 0, 80%), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 80%));
+      }
+      &:hover {
+         .stories__images {
+            transform: scale(1.2);
+         }
+      }
+   }
+
+   &__images {
+      transition: transform 4s linear;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scale(1.03);
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+   }
+
+   &__text,
+   &__date {
+      position: relative;
+      z-index: 1;
+      padding: 15px;
+   }
+   &__text {
+      flex: 1 1 auto;
+   }
+   &__date {
+      text-align: right;
+   }
+}

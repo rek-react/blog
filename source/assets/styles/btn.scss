@@ -1,0 +1,31 @@
+.btn {
+   color: $white;
+   background-color: transparent;
+   padding: 15px 25px;
+   border-radius: 35px;
+   display: inline-block;
+   @include adaptive-value(font-size, 12, 14,  1);
+   cursor: pointer;
+   font-family: inherit;
+   max-width:200px;
+   min-width: 65px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   &-red {
+      background-color: $red;
+   }
+   &-blue {
+      background-color: $blue;
+   }
+   &-br5{
+      padding: 8px 15px;
+      border-radius: 5px;
+      &:focus{
+         border: 1px solid $white;
+      }
+   }
+   @include breakpoint($md-1, 0){
+      padding: 15px 20px;
+   }
+}

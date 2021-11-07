@@ -1,0 +1,42 @@
+.related {
+   margin-bottom: 30px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid $primary;
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px;
+   }
+
+   &__col {
+      padding: 0 20px;
+      flex: 0 1 50%;
+      min-width: 0;
+      margin-bottom: 25px;
+      @include breakpoint($md-2, 0){
+         flex: 0 1 100%;
+      }
+   }
+
+   &__item {
+   }
+
+   &__text {
+      color: #f3eba2;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+   }
+
+   &__date {
+      margin-top: 5px;
+      display: block;
+      color: #828282;
+   }
+}

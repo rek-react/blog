@@ -1,0 +1,54 @@
+
+.mobile-menu {
+
+   a{
+      color: $white;
+   }
+   &__list {
+   }
+
+   &__item {
+      margin-bottom: 20px;
+      position: relative;
+
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+
+   &__link {
+      &:active{
+         color:#107EFF;
+      }
+   }
+}
+
+.mobile-menu-sub {
+
+   &__list {
+      margin: 20px 0 0 20px;
+      transform: translateY(-5px);
+      transition: transform 0.2s linear;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      &._show {
+         opacity: 1;
+         transform: translateY(0px);
+         visibility: visible;
+         position: static;
+      }
+   }
+
+   &__item {
+      margin-bottom: 15px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+
+   &__link {
+   }
+}

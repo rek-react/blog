@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Главная</title>
+   <link rel="stylesheet" href="assets/styles/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      @@include('_header-sign-up.html')
+      @@include('_aside-sign-up.html')
+      <main class="main">
+         <div class="container">
+            <div class="sign center-block">
+               <div class="sign__body">
+                  <div class="sign__title title">Вход</div>
+                  <div class="sign__content">
+                     <form action="index.html" class="sign__form form">
+                        <div class="form__group">
+                           <input type="email" class="form__controll" id="email" name="email" placeholder="Введите email">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" id="password" name="password" placeholder="Пароль">
+                        </div>
+                        
+                        <button class="signup__btn btn btn-blue btn-br5" type="submit">Войти</button>
+                     </form>
+                     <div class="sign__actions sign-actions">
+                        <a href="restore.html" class="sign-actions__action">восстановить</a>
+                        <a href="signup.html" class="sign-actions__action">регистрация</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   @@include('_modal-contact.html')
+   <script src="assets/scripts/all.min.js"></script>
+</body>
+
+</html>

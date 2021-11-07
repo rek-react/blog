@@ -1,0 +1,38 @@
+.menu {
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   &__list,&__item, &__link{
+      height: 100%;
+   }
+   @include breakpoint($md-1, 0){
+      display: none;
+   }
+   &__list {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+   }
+  
+   &__item {
+      position: relative;
+      &:last-child {
+         margin-left: auto;
+      }
+   }
+
+   &__link {
+      text-transform: uppercase;
+      color: $white;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      transition: background-color 0.2s linear;
+      &:hover,
+      &._active {
+         background-color: $blue;
+      }
+     
+   }
+   
+}

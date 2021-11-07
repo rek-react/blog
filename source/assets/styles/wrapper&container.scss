@@ -1,0 +1,41 @@
+.wrapper {
+   overflow: hidden;
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   position: relative;
+   
+   @include breakpoint($md-1, 0){
+      &::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         transform: translateX(-100%);
+         width: 100%;
+         height: 100%;
+         transition: transform 0.2s linear;
+         background-color: rgba($color: #000000, $alpha: 0.8);
+         z-index: $z-index-aside-mask;
+      }
+      &._show-sidebar-mask::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         transform: translateX(0%);
+         width: 100%;
+         height: 100%;
+         background-color: rgba($color: #000000, $alpha: 0.8);
+         z-index: $z-index-aside-mask;
+      }
+   }
+  
+}
+.container {
+   max-width: 630px;
+   padding: 0 15px;
+   margin: 0 auto;
+}

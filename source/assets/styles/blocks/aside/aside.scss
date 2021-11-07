@@ -1,0 +1,46 @@
+.sidebar {
+   position: fixed;
+   left: 0;
+   height: 100vh;
+   overflow: auto;
+   top: 0;
+   width: $widthSidebar;
+   background-color: $supPrimary;
+   box-shadow: 5px 0 10px rgba($color: #000000, $alpha: 25%);
+   z-index: $z-index-aside;
+   padding-bottom:25px;
+   @include breakpoint($md-1, 0){
+      padding-top: $heightHeader;
+      background-color: $black;
+      transform: translateX(-100%);
+      transition: transform 0.2s linear;
+      &._show{
+         transform: translateX(0%);
+      }
+   }
+   
+   &__images {
+      height: 180px;
+      img {
+         width: 100%;
+         height: 100%;
+         display: block;
+         object-fit: cover;
+      }
+      @include breakpoint($md-1, 0){
+         height: 100px;
+      }
+   }
+
+   &__content {
+      padding: 0 15px;
+      margin-top: -50px;
+      text-align: center;
+      @include breakpoint($md-1, 0){
+         margin-top: -15px;
+         text-align: left;
+      }
+   }
+   
+   
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Профиль</title>
+   <link rel="stylesheet" href="assets/styles/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      @@include('_header.html')
+      @@include('_aside.html')
+      <main class="main">
+         <div class="container">
+            <div class="cabinet">
+               <div class="cabinet__title title title-more">
+                  Профиль
+               </div>
+               <div class="cabinet__body">
+                  <div class="cabinet__row">
+                     <form action="#" class="cabinet__form form">
+                        <div class="form__group">
+                           <input type="text" class="form__controll" name="name" placeholder="Введите имя и фамилию" value="Дмитрий Валак">
+                        </div>
+                        <div class="form__group">
+                           <input type="email" class="form__controll" name="email" placeholder="Введите email" value="alex.provo@mail.com">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password" placeholder="Новый пароль">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password-repeat" placeholder="Повторите пароль">
+                        </div>
+                        <button class="cabinet__btn btn btn-blue btn-br5" type="submit">Сохранить</button>
+                     </form>
+                     <div class="cabinet__avatar">
+                        <div class="cabinet__select">
+                        <img class="cabinet__image" src="assets/images/cabinet/avatar.jpg" alt="">
+                        <label class="cabinet__file">
+                           <input type="file" accept=".jpg, .png, .svg, .webp">
+                           <span>выбрать  аватар</span>
+                        </label>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   @@include('_modal-contact.html')
+   <script src="assets/scripts/all.min.js"></script>
+</body>
+
+</html>

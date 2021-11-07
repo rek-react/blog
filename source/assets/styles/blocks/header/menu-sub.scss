@@ -1,0 +1,32 @@
+.menu-sub {
+   &__list {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      padding: 15px;
+      min-width: 180px;
+      background-color: $blue;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s linear;
+      transform: translateY(-10px);
+      &._show {
+         opacity: 1;
+         visibility: visible;
+         transform: translateY(0px);
+      }
+   }
+
+   &__item {
+      margin-bottom: 10px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__link {
+      text-decoration: underline;
+      color: $white;
+      font-size: 15px;
+   }
+}

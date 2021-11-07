@@ -1,0 +1,149 @@
+.post {
+   padding: 25px;
+   background-color: $supPrimary;
+   overflow: hidden;
+   border-radius: 5px;
+   box-shadow: 0 25px 20px rgba($color: #000000, $alpha: 35%);
+   @include breakpoint($md-2, 1){
+      a:not(.post__images):hover {
+         text-decoration: underline;
+      }
+   }
+   @include breakpoint($md-2, 0){
+      padding: 15px 15px 20px 15px; 
+   }
+   &:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   &_open {
+      .post__text {
+         padding-bottom: 30px;
+         border-bottom: 1px solid $primary;
+         margin-bottom: 30px;
+      }
+      .post__title {
+         margin-bottom: 10px;
+      }
+   }
+   &__header {
+      margin-bottom: 25px;
+      &_prew {
+         margin: -25px -25px 25px;
+      }
+   }
+   &__videos {
+      position: relative;
+      padding-bottom: 56.25%;
+      iframe,
+      video,
+      object {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__images {
+      img {
+         display: block;
+         height: auto;
+         object-fit: cover;
+         width: 100%;
+      }
+   }
+   &__content {
+   }
+   &__title {
+      font-weight: 500;
+      font-size: 18px;
+      color: $white;
+      margin-bottom: 15px;
+      display: inline-block;
+   }
+   .sub-title {
+      font-size: 16px;
+      color: $white;
+      font-weight: 500;
+   }
+   &__text {
+      color: #d2d2d2;
+      line-height: calc(25 / 14);
+      @include adaptive-value(font-size, 14, 13,  1);
+      p {
+         margin-bottom: 25px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   &__footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      @include breakpoint($md-3, 0){
+         margin-top: 20px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      @include breakpoint($md-3, 0){
+         flex: 1 1 100%;
+      }
+   }
+
+   &__item {
+      color: #828282;
+      display: flex;
+      align-items: center;
+      &:not(:first-child)::before {
+         content: "";
+         width: 6px;
+         display: inline-block;
+         height: 6px;
+         background-color: #c4c4c4;
+         border-radius: 50%;
+         margin: 0 15px;
+      }
+      a {
+         color: inherit;
+      }
+      
+   }
+
+   &__read-and-write {
+      color: #107eff;
+      @include breakpoint($md-3, 0){
+         margin-top: 15px;
+      }
+   }
+
+   &__actions {
+      margin: -10px 0 15px;
+      display: flex;
+      justify-content: space-between;
+      @include breakpoint($md-2, 0){
+         margin-top: 0;
+      }
+   }
+   &__action {
+      opacity: 0.6;
+      color: $white;
+      @include adaptive-value(font-size, 14, 12,  1);
+      transition: opacity 0.1s linear;
+      &:hover {
+         opacity: 1;
+      }
+      display: flex;
+      align-items: center;
+      span {
+         margin: 0 3px;
+      }
+      
+   }
+}

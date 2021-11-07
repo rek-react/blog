@@ -1,0 +1,70 @@
+.works {
+   &__body{
+   }
+   &__row{
+      display: flex;
+      &:not(:last-child){
+         margin-bottom: 30px;
+      }
+      @include breakpoint($md-3, 0){
+         display: block;
+      }
+   }
+   &__prewios {
+      flex: 0 0 calc((315 / 630) * 100%);
+      img{
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+      }
+      @include breakpoint($md-3, 0){
+         height: 250px;
+      }
+      
+   }
+
+   &__content {
+      background-color: $supPrimary;
+      flex: 1 1 auto;
+      padding: 28px ;
+      display: flex;
+      flex-direction: column;
+   }
+   &__header{
+
+   }
+   &__link{
+      color: $white;
+      font-weight: 500;
+      font-size: 24px;
+      @media (min-width: 767px){
+         &:hover{
+            text-decoration: underline;
+         }
+      }
+   }
+   &__description{
+      flex: 1 1 auto;
+      margin-top: 30px;
+   }
+   &__text {
+      color: #D2D2D2;
+      font-size: 16px;
+      line-height: 27px;
+      
+   }
+
+   &__tags {
+      margin-top: 30px;
+   }
+   &__footer{
+      text-align: right;
+      margin-top: 20px;
+   }
+   &__btn {
+   }
+}
+
+
+
+

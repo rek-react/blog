@@ -1,0 +1,42 @@
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 80px;
+   color: $white;
+   @include breakpoint($md-2, 0){
+      margin-top: 50px;
+   }
+   &__list, .swiper-pagination-bullets {
+      display: flex;
+      align-items: center;
+      position: relative;
+   }
+
+   &__item {
+      margin: 0 5px;
+   }
+
+   &__link {
+      color: inherit;
+   }
+   &__link, .swiper-pagination-bullet {
+      width: 40px;
+      height: 40px;
+      background-color: $black;
+      line-height: 40px;
+      text-align: center;
+      display: block;
+      cursor: pointer;
+      &:not(.swiper-pagination-bullet-active):hover {
+         background-color: #0d0d0d5b;
+      }
+      &-active {
+         background-color: $blue;
+      }
+      
+   }
+   .swiper-pagination-bullet{
+      margin: 0 5px;
+   }
+}

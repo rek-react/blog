@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Главная</title>
+   <link rel="stylesheet" href="assets/styles/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      @@include('_header-sign-up.html')
+      @@include('_aside.html')
+      <main class="main">
+         <div class="container">
+            <div class="signup center-block">
+               <div class="signup__body">
+                  <div class="signup__title title">Регистрация</div>
+                  <div class="signup__content">
+                     <form action="#" class="signup__form form">
+                        <div class="form__group">
+                           <input type="text" class="form__controll" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__group">
+                           <input type="email" class="form__controll" name="email" placeholder="Введите email">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password" placeholder="Новый пароль">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password-repeat" placeholder="Повторите пароль">
+                        </div>
+                        <button class="signup__btn btn btn-blue btn-br5" type="submit">Зарегистрироваться</button>
+                     </form>
+                     <div class="signup__actions sign-actions">
+                        <a href="restore.html class="sign-actions__action">восстановить</a>
+                        <a href="sign.html" class="sign-actions__action">вход</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   @@include('_modal-contact.html')
+   <script src="assets/scripts/all.min.js"></script>
+</body>
+
+</html>

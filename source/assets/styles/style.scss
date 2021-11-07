@@ -1,0 +1,76 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+
+@import "fonts";
+@import "mixins";
+@import "vars";
+@import "reboot";
+@import "wrapper&container";
+@import "ibg";
+@import "btn";
+@import "swiper";
+@import "blocks/header/header";
+@import "blocks/header/burger";
+@import "blocks/has-sub-menu.scss";
+@import "blocks/aside/aside";
+@import "blocks/aside/profile";
+@import "blocks/aside/social";
+@import "blocks/aside/mobile-menu";
+@import "blocks/header/menu";
+@import "blocks/header/menu-sub";
+@import "blocks/header/search-form";
+@import "blocks/main/stories";
+@import "blocks/main/post/add-post";
+@import "blocks/main/pagination";
+@import "blocks/main/post/post";
+@import "blocks/main/form";
+@import "blocks/main/post/related";
+@import "blocks/main/post/comments";
+@import "blocks/main/works/works";
+@import "blocks/main/works/tags";
+@import "blocks/main/cabinet";
+@import "blocks/main/sign/sign";
+@import "blocks/main/sign/sign-actions";
+@import "blocks/modal/modal";
+body {
+   font-size: 14px;
+   font-family: "Roboto";
+   background-color: $primary;
+   &._lock-sidebar{
+      overflow: hidden;
+   }
+   &._lock-modal{
+      overflow: hidden;
+   }
+}
+.main {
+   padding: calc(70px + #{$heightHeader}) 0 80px #{$widthSidebar};
+   @include breakpoint($md-1, 0){
+      padding: calc(20px + #{$heightHeader}) 0 50px 0;
+
+   }
+   
+}
+.title{
+   font-size: 21px;
+   color: $white;
+   margin-bottom: 30px;
+   &-more{
+      margin-bottom: 60px;
+      @include breakpoint($md-3, 0){
+         margin-bottom: 40px;
+      }
+   }
+}
+.center-block {
+   text-align: center;
+   max-width: 280px;
+   margin: 0 auto;
+}
