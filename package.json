@@ -1,9 +1,9 @@
 {
-  "name": "auction",
+  "name": "blog",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://rek123124.github.io/funiro",
-  "repository": "git@github.com:rek123124/funiro.git",
+  "homepage": "https://rek123124.github.io/blog",
+  "repository": "git@github.com:rek123124/blog.git",
   "author": "<viktorhelp12@gmail.com>",
   "type": "module",
   "scripts": {
