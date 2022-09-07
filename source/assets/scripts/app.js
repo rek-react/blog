@@ -1,7 +1,0 @@
-@@include('aside.js')
-@@include('menuSub.js')
-@@include('swiperuser.js')
-@@include('modal.js')
-@@include('textarea.js')
-@@include('sign.js')
-@@include('search.js')

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+title: "Главная"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html')
+      @@include('html/aside.html')
+      <main class="main">
+         <div class="container">
+            @@include('html/stories.html')
+            @@include('html/add-post.html')
+            <div class="post-container swiper-container">
+               <div class="post-wrapper swiper-wrapper">
+                  <div class="post-item swiper-slide">
+                     @@include('html/post-1.html')
+                  </div>
+                  <div class="post-item swiper-slide">
+                     @@include('html/post-2.html')
+                  </div>
+                  <div class="post-item swiper-slide">
+                     @@include('html/post-3.html')
+                  </div>
+               </div>
+            </div>
+            @@include('html/pagination.html')
+         </div>
+      </main>
+   </div>
+   @@include('html/modal-contact.html')
+   @@include('html/modal-story.html')
+   @@include('html/js.html')
+</body>
+
+</html>

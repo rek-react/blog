@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+title: "Регистрация"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header-sign-up.html')
+      @@include('html/aside.html')
+      <main class="main">
+         <div class="container">
+            <div class="signup center-block">
+               <div class="signup__body">
+                  <div class="signup__title title">Регистрация</div>
+                  <div class="signup__content">
+                     <form action="#" class="signup__form form">
+                        <div class="form__group">
+                           <input type="text" class="form__controll" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__group">
+                           <input type="email" class="form__controll" name="email" placeholder="Введите email">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password" placeholder="Новый пароль">
+                        </div>
+                        <div class="form__group">
+                           <input type="password" class="form__controll" name="password-repeat"
+                              placeholder="Повторите пароль">
+                        </div>
+                        <button class="signup__btn btn btn-blue btn-br5" type="submit">Зарегистрироваться</button>
+                     </form>
+                     <div class="signup__actions sign-actions">
+                        <a href="restore.html" class=" sign-actions__action">восстановить</a>
+                        <a href="sign.html" class="sign-actions__action">вход</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   @@include('html/modal-contact.html')
+   @@include('html/js.html')
+</body>
+
+</html>
